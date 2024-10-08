@@ -1,4 +1,4 @@
-package com.tamerlan.dependencyinjectionstart
+package com.tamerlan.dependencyinjectionstart.example1
 
 class Component {
     private fun getComputer(): Computer {
@@ -14,8 +14,8 @@ class Component {
     }
 
     fun inject(activity: Activity) {
-        activity.computer = getComputer()
-        activity.keyboard = Keyboard()
+//        activity.computer = getComputer()
+//        activity.keyboard = Keyboard()
 
     }
 }

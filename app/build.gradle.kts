@@ -1,7 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
+//    id("kotlin-kapt")
+
+    //ksp
+    id("com.google.devtools.ksp")
+
+    //+hilt
+    //    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -47,7 +53,22 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+//    implementation("com.google.dagger:dagger:2.52")
+//    ksp("com.google.dagger:dagger-android-processor:2.52")
+//    ksp("com.google.dagger:dagger-compiler:2.52")
+
     implementation(libs.dagger)
-//    annotationProcessor(libs.dagger.compiler)
-    kapt(libs.dagger.compiler)
+    ksp(libs.dagger.compiler)
+    ksp(libs.dagger.android.processor)
+
+
+//    kapt(libs.dagger.compiler.v2283)
+
+
+//Dagger - Hilt
+//    implementation("com.google.dagger:hilt-android:2.48")
+//    ksp("com.google.dagger:hilt-compiler:2.48")
+
+
 }
