@@ -1,5 +1,6 @@
 package com.tamerlan.dependencyinjectionstart.example2.di
 
+import android.content.Context
 import com.tamerlan.dependencyinjectionstart.example2.data.datasource.ExampleLocalDataSource
 import com.tamerlan.dependencyinjectionstart.example2.data.datasource.ExampleLocalDataSourceImpl
 import com.tamerlan.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
@@ -10,6 +11,7 @@ import dagger.Provides
 
 @Module
 interface DataModule {
+
     @Binds
     fun bindExampleLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
