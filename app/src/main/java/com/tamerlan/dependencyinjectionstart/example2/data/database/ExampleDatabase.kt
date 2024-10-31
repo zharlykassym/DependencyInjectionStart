@@ -10,7 +10,7 @@ class ExampleDatabase @Inject constructor(
     private val timeMillis: Long) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleDatabase ${context.getString(R.string.app_name)} $timeMillis")
+        Log.d(LOG_TAG, "ExampleDatabase ${context.getString(R.string.app_name)} $timeMillis $this")
     }
 
     companion object {
